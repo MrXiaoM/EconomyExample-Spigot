@@ -61,6 +61,16 @@ currency-names:
     type: 点数
 ```
 
+最后，将需要支持的经济插件添加到 `plugin.yml` 中的 `softdepend` 声明：
+```yaml
+softdepend:
+  - Vault
+  - PlayerPoints
+  - MPoints
+  - CoinsEngine
+  - NyEconomy
+```
+
 ## 使用示例
 
 ```java

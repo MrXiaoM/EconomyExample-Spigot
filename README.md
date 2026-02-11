@@ -95,7 +95,7 @@ void foo(OfflinePlayer player) {
     
     // 扣除货币给予钻石示例
     if (currency.takeMoney(player, 50)) {
-        player.getInventory().giveItem(new ItemStack(Material.DIAMOND));
+        player.getInventory().addItem(new ItemStack(Material.DIAMOND));
         player.sendMessage("你购买了一个钻石");
     } else {
         player.sendMessage("你没有足够的金钱购买这个商品");

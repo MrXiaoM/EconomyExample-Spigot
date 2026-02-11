@@ -27,6 +27,7 @@ public class MPointsCurrency implements ICurrency {
                 String sign = str.substring(8);
                 ICurrency exists = cache.get(sign);
                 if (exists != null) return exists;
+                if (!economy.getpointslist().contains(sign)) return null;
                 MPointsCurrency currency = new MPointsCurrency(registry, economy, sign);
                 cache.put(sign, currency);
                 return currency;
